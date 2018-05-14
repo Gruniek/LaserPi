@@ -34,11 +34,11 @@ directZ   = LOW  #
 
 # Initialisation de la numerotation et des E/S
 GPIO.setmode(GPIO.BOARD)
-GPIO.setup(Xstep, GPIO.OUT, initial=GPIO.LOW)
+GPIO.setup(Xstep, GPIO.OUT, initial=GPIO.HIGH)
 GPIO.setup(Xdir, GPIO.OUT, initial=GPIO.LOW)
-GPIO.setup(Ystep, GPIO.OUT, initial=GPIO.LOW)
+GPIO.setup(Ystep, GPIO.OUT, initial=GPIO.HIGH)
 GPIO.setup(Ydir, GPIO.OUT, initial=GPIO.LOW)
-GPIO.setup(Zstep, GPIO.OUT, initial=GPIO.LOW)
+GPIO.setup(Zstep, GPIO.OUT, initial=GPIO.HIGH)
 GPIO.setup(Zdir, GPIO.OUT, initial=GPIO.LOW)
 GPIO.setup(LedStatus, GPIO.OUT, initial=GPIO.LOW)
 GPIO.setup(LedError, GPIO.OUT, initial=GPIO.LOW)
