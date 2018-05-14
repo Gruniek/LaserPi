@@ -23,7 +23,14 @@ EmgStop    = 16  # In
 
 #Variable
 x = y = z = 0.0     # XYZ position
+nbStep_X = 256 # Number of step / 0.1mm
+nbStep_Y = 256 # Number of step / 0.1mm
+nbStep_Z = 256 # Number of step / 0.1mm
 
+timeStep  = 0.01 #  
+directX   = LOW  #
+directY   = LOW  #
+directZ   = LOW  #
 
 # Initialisation de la numerotation et des E/S
 GPIO.setmode(GPIO.BOARD)
@@ -85,4 +92,20 @@ def BackHome ( ):
     home = GPIO.input(XendStop)
 
 
-    retunr
+    return
+
+
+
+def moveX ( direction, timeStep, nbStep ):
+    # Set the direction
+    GPIO.output(Xdir, direction)
+    # Move
+    for cpt in range(0, nbStep):
+        GPIO.output(Xstep, GPIO.LOW)
+        time.sleep(timeStep)
+        GPIO.output(Xstep, GPIO.HIGH)
+
+    if direction == HIGH
+        x = x + 0.1
+    else x = x - 0.1
+    
